@@ -1,0 +1,393 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-white);
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('RobotoRegular'),
+    url('../fonts/Roboto.woff2') format("woff2"),
+    url('../fonts/Roboto.woff') format("woff");
+  font-weight: 400;
+  }
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: local('RobotoBold'),
+    url('../fonts/Robotobold.woff2') format("woff2"),
+    url('../fonts/Robotobold.woff') format("woff");
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+:root {
+  --color-white: #FFFFFF;
+  --blue: #3F2AFF;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+
+
+/*header*/
+
+.header {
+  padding: 30px 0;
+  background: var(--blue);
+
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+ margin-right: auto;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.nav__link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--color-white);
+}
+
+/*burger*/
+
+.burger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  display: none;
+  margin-right: auto;
+  color: var(--color-black);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 2000;
+  width: 100%;
+  height: 3px;
+  border-radius: inherit;
+  background-color: var(--color-black);
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 2000;
+  background-color: var(--color-black);
+  transition: transform .3s ease-in-out, top .3s ease-in-out, bottom .3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger--active .burger__line {
+  opacity: 0;
+}
+
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.burger--active::after {
+  bottom: auto;
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+
+/*hero*/
+
+.hero {
+  background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+
+}
+.hero__right {
+  background-image: url(../img/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 655px 593px;
+}
+
+.hero__content {
+  padding: 126px 0 130px 14px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+  font-family: 'RobotoBold';
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  color: var(--color-white);
+}
+
+.hero__descr {
+  margin-bottom: 60px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-white);
+}
+
+.hero__btn {
+  padding: 24px 76px;
+  background: var(--blue);
+  border-radius: 20px;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/*advantages*/
+
+.advantages__container {
+  padding: 67px 0;
+}
+
+.advantages__top {
+  margin-bottom: 36px;
+  padding: 12px 353px 0 208px;
+  background-image: url(../img/Vectary.png);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.second-title {
+  margin-bottom: 30px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+}
+
+.advantages__title {
+  color: #2E2B44;
+  margin-bottom: 16px;
+}
+
+.advantages__descr {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #666666;
+}
+
+.advantages__img {
+  margin-right: 32px;
+}
+
+.advantages__item-descr {
+  font-family: 'RobotoBold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #666666;
+}
+
+/*teachers*/
+
+.teachers {
+  background: #212133;
+}
+
+.teachers__container {
+  padding: 75px 14px;
+}
+
+.teachers__title {
+  color: var(--color-white);
+}
+
+/*.teachers__padding {
+  border-radius: 20px 20px 0px 0px;
+  flex-direction: column;
+  overflow: hidden;
+}*/
+
+.teachers__picture {
+  margin-bottom: 21px;
+}
+
+.teachers__card-title {
+  margin-bottom: 9px;
+  font-family: 'RobotoBold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-white);
+}
+
+.teachers__descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #85859B;
+}
+
+.teachers__card {
+  flex-direction: column;
+}
+
+/*cources*/
+
+.cources__container {
+  padding: 71px 16px;
+}
+
+.cources__title {
+  color: #2E2B44;
+}
+
+.cources__padding {
+  padding: 30px;
+}
+
+.cources__item {
+  display: flex;
+}
+
+.cources__card {
+  background: #EDF0F9;
+  border-radius: 0px 0px 20px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cources__card-title {
+  margin-bottom: 8px;
+  font-family: 'RobotoBold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #212133;
+}
+
+
+.cources__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding: 24px 30px;
+}
+
+.cources__descr {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #666666;
+
+}
+
+.cources__btn {
+  padding: 20px 59px;
+  background: var(--blue);
+  border-radius: 20px;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: auto;
+}
+
+/*footer*/
+
+.footer-sm {
+  background-color: #2E2B44;
+  padding: 35px 0;
+}
+
+.footer-sm__list {
+  justify-content: center;
+  margin-bottom: -16px;
+}
+
+.footer-sm__item {
+  margin-right: 30px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  padding: 3px 0;
+}

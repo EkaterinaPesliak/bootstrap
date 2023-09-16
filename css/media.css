@@ -1,0 +1,199 @@
+@media (max-width: 800px) {
+  .hero__title {
+  font-size: 50px;
+  margin-bottom: 15px;
+  }
+
+  .hero__right {
+    background-position: 0 123px;
+    background-size: 340px 339px;
+  }
+
+  .advantages__top {
+    margin-bottom: 23px;
+    padding: 22px 41px 0 254px;
+    background-size: 30%;
+    background-position: 16px 43px;
+  }
+
+  .advantages__item {
+    flex-direction: column;
+  }
+
+  .advantages__img {
+    max-width: 77px;
+    margin-bottom: 13px;
+  }
+
+  .teachers__container {
+    padding: 81px 18px;
+  }
+
+  .teachers__title {
+    margin-bottom: 23px;
+  }
+
+  .teachers__picture {
+    margin-bottom: 29px;
+  }
+
+  .teachers__text {
+    margin-bottom: 20px;
+  }
+
+  .cources__container {
+    padding: 46px 16px;
+}
+
+  .cources__title {
+    margin-bottom: 23px;
+  }
+}
+
+@media (max-width: 760px) {
+  .header__container {
+    flex-direction: column;
+
+  }
+
+  .header__logo {
+    align-self: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero__right {
+    background-image: none;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .header__logo {
+    margin-bottom: 26px;
+  }
+
+  .header__nav {
+    padding: 0 20px;
+  }
+
+  .hero__content {
+    padding: 79px 162px 136px 14px;
+  }
+
+  .advantages__top {
+
+    padding: 13px 19px 0 198px;
+    background-size: 28%;
+    background-position: 15px 13px;
+  }
+
+
+}
+
+
+@media (max-width: 520px) {
+  .is-active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    background-color: var(--color-white);
+    padding: 170px 106px 230px 50px;
+    width: 50%;
+    max-width: 420px;
+    max-height: 800px;
+    transform: translate(-100%);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .nav--visible {
+    transform: none;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .header__logo {
+    align-self: left;
+  }
+
+  .hero__title {
+    font-size: 30px;
+    margin-bottom: 4px;
+  }
+
+  .hero__content {
+    padding: 0px 19px 51px 14px;
+  }
+
+  .hero__descr {
+    margin-bottom: 47px;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  .hero__btn {
+    font-size: 16px;
+    padding: 18px 55px;
+  }
+
+  .second-title {
+    font-size: 20px;
+  }
+
+  .advantages__container {
+    padding: 51px 0 18px 0;
+}
+  .advantages__top {
+    background-image: none;
+    padding: 2px 19px 0 15px;
+  }
+
+  .advantages__title {
+    margin-bottom: 10px;
+  }
+
+  .advantages__item {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  .teachers__container {
+    padding: 47px 18px 29px 18px;
+  }
+
+  .teachers__title {
+    margin-bottom: 26px;
+  }
+
+  .teachers__picture {
+    margin-bottom: 31px;
+  }
+  .cources__title {
+    margin-bottom: 25px;
+  }
+}
